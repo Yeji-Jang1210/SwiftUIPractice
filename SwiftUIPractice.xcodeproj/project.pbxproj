@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B88BFF1A2C8580E8000FEE94 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88BFF192C8580E8000FEE94 /* Character.swift */; };
+		B88BFF1C2C858655000FEE94 /* SignUpCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88BFF1B2C858655000FEE94 /* SignUpCompleteView.swift */; };
+		B88BFF1E2C8589FA000FEE94 /* MBTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88BFF1D2C8589FA000FEE94 /* MBTI.swift */; };
+		B88BFF202C859A4C000FEE94 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B88BFF1F2C859A4C000FEE94 /* .gitignore */; };
 		B8FE8B172C85741300D7218F /* SwiftUIPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE8B162C85741300D7218F /* SwiftUIPracticeApp.swift */; };
-		B8FE8B192C85741300D7218F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE8B182C85741300D7218F /* ContentView.swift */; };
+		B8FE8B192C85741300D7218F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE8B182C85741300D7218F /* OnboardingView.swift */; };
 		B8FE8B1B2C85741500D7218F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8FE8B1A2C85741500D7218F /* Assets.xcassets */; };
 		B8FE8B1E2C85741500D7218F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8FE8B1D2C85741500D7218F /* Preview Assets.xcassets */; };
+		B8FE8B262C85761200D7218F /* BasicButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE8B252C85761200D7218F /* BasicButtonView.swift */; };
+		B8FE8B292C857CD100D7218F /* ProfileSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FE8B282C857CD100D7218F /* ProfileSettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B88BFF192C8580E8000FEE94 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		B88BFF1B2C858655000FEE94 /* SignUpCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCompleteView.swift; sourceTree = "<group>"; };
+		B88BFF1D2C8589FA000FEE94 /* MBTI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTI.swift; sourceTree = "<group>"; };
+		B88BFF1F2C859A4C000FEE94 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B8FE8B132C85741300D7218F /* SwiftUIPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8FE8B162C85741300D7218F /* SwiftUIPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPracticeApp.swift; sourceTree = "<group>"; };
-		B8FE8B182C85741300D7218F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B8FE8B182C85741300D7218F /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		B8FE8B1A2C85741500D7218F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8FE8B1D2C85741500D7218F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B8FE8B252C85761200D7218F /* BasicButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButtonView.swift; sourceTree = "<group>"; };
+		B8FE8B282C857CD100D7218F /* ProfileSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,9 +44,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B88BFF182C8580E0000FEE94 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B88BFF192C8580E8000FEE94 /* Character.swift */,
+				B88BFF1D2C8589FA000FEE94 /* MBTI.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		B8FE8B0A2C85741300D7218F = {
 			isa = PBXGroup;
 			children = (
+				B88BFF1F2C859A4C000FEE94 /* .gitignore */,
 				B8FE8B152C85741300D7218F /* SwiftUIPractice */,
 				B8FE8B142C85741300D7218F /* Products */,
 			);
@@ -51,8 +73,10 @@
 		B8FE8B152C85741300D7218F /* SwiftUIPractice */ = {
 			isa = PBXGroup;
 			children = (
+				B88BFF182C8580E0000FEE94 /* Util */,
+				B8FE8B272C857C8500D7218F /* UI */,
+				B8FE8B242C85758900D7218F /* Custom */,
 				B8FE8B162C85741300D7218F /* SwiftUIPracticeApp.swift */,
-				B8FE8B182C85741300D7218F /* ContentView.swift */,
 				B8FE8B1A2C85741500D7218F /* Assets.xcassets */,
 				B8FE8B1C2C85741500D7218F /* Preview Content */,
 			);
@@ -65,6 +89,24 @@
 				B8FE8B1D2C85741500D7218F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B8FE8B242C85758900D7218F /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				B8FE8B252C85761200D7218F /* BasicButtonView.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		B8FE8B272C857C8500D7218F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B8FE8B182C85741300D7218F /* OnboardingView.swift */,
+				B8FE8B282C857CD100D7218F /* ProfileSettingView.swift */,
+				B88BFF1B2C858655000FEE94 /* SignUpCompleteView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8FE8B1E2C85741500D7218F /* Preview Assets.xcassets in Resources */,
+				B88BFF202C859A4C000FEE94 /* .gitignore in Resources */,
 				B8FE8B1B2C85741500D7218F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +180,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8FE8B192C85741300D7218F /* ContentView.swift in Sources */,
+				B8FE8B192C85741300D7218F /* OnboardingView.swift in Sources */,
+				B88BFF1C2C858655000FEE94 /* SignUpCompleteView.swift in Sources */,
+				B8FE8B292C857CD100D7218F /* ProfileSettingView.swift in Sources */,
+				B88BFF1A2C8580E8000FEE94 /* Character.swift in Sources */,
+				B8FE8B262C85761200D7218F /* BasicButtonView.swift in Sources */,
 				B8FE8B172C85741300D7218F /* SwiftUIPracticeApp.swift in Sources */,
+				B88BFF1E2C8589FA000FEE94 /* MBTI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
