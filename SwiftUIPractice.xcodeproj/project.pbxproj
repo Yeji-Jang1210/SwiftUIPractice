@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B801F3252C875A610082E7AC /* UpbitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B801F3242C875A610082E7AC /* UpbitDetailView.swift */; };
+		B87651952C889190001FEB94 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87651942C889190001FEB94 /* CategoryView.swift */; };
 		B88BFF1A2C8580E8000FEE94 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88BFF192C8580E8000FEE94 /* Character.swift */; };
 		B88BFF1C2C858655000FEE94 /* SignUpCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88BFF1B2C858655000FEE94 /* SignUpCompleteView.swift */; };
 		B88BFF1E2C8589FA000FEE94 /* MBTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88BFF1D2C8589FA000FEE94 /* MBTI.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		B801F3242C875A610082E7AC /* UpbitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpbitDetailView.swift; sourceTree = "<group>"; };
+		B87651942C889190001FEB94 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		B88BFF192C8580E8000FEE94 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		B88BFF1B2C858655000FEE94 /* SignUpCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCompleteView.swift; sourceTree = "<group>"; };
 		B88BFF1D2C8589FA000FEE94 /* MBTI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTI.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				B8FE8B182C85741300D7218F /* OnboardingView.swift */,
 				B8FE8B282C857CD100D7218F /* ProfileSettingView.swift */,
 				B88BFF1B2C858655000FEE94 /* SignUpCompleteView.swift */,
+				B87651942C889190001FEB94 /* CategoryView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				B801F3252C875A610082E7AC /* UpbitDetailView.swift in Sources */,
 				B8E4430A2C875461008C2EF4 /* UpbitAPI.swift in Sources */,
 				B88BFF1C2C858655000FEE94 /* SignUpCompleteView.swift in Sources */,
+				B87651952C889190001FEB94 /* CategoryView.swift in Sources */,
 				B8FE8B292C857CD100D7218F /* ProfileSettingView.swift in Sources */,
 				B88BFF1A2C8580E8000FEE94 /* Character.swift in Sources */,
 				B8FE8B262C85761200D7218F /* BasicButtonView.swift in Sources */,
