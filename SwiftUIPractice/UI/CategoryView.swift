@@ -25,21 +25,8 @@ struct CategoryView: View {
     
     var body: some View {
         NavigationView {
-            List{
-                ForEach(filteredList, id: \.id){ item in
-                    HStack {
-                        NavigationLink {
-                            DetailCategoryView()
-                        } label: {
-                            HStack {
-                                Image(systemName: "person")
-                                Text("\(item.name)(\(item.count))")
-                            }
-                        }
-
-                    }
-                }
-            }
+            
+            listView()
             .navigationTitle("영화 검색")
             .toolbar {
                 Button(action: {
@@ -52,6 +39,24 @@ struct CategoryView: View {
         .searchable(text: $text, placement: .navigationBarDrawer, prompt: "영화를 검색해보세요.")
         .onAppear {
             
+        }
+    }
+    
+    func listView() -> some View {
+        List{
+            ForEach(filteredList, id: \.id){ item in
+                HStack {
+                    NavigationLink {
+                        DetailCategoryView()
+                    } label: {
+                        HStack {
+                            Image(systemName: "person")
+                            Text("\(item.name)(\(item.count))")
+                        }
+                    }
+
+                }
+            }
         }
     }
 }
