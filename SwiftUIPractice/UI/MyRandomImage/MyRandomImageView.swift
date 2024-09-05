@@ -36,25 +36,21 @@ struct MyRandomImageView: View {
         NavigationView {
             ScrollView {
                 ForEach($list, id: \.id){ section in
-                    SectionHorizontalView(section: section)
+                    //SectionHorizontalView(section: section)
+                    sectionHorizontalView(section)
                 }
             }
             .navigationTitle("My Random Image")
         }
     }
-}
-
-struct SectionHorizontalView: View {
     
-    @Binding var section: Section
-    
-    var body: some View {
+    func sectionHorizontalView(_ section: Binding<Section>) -> some View {
         VStack(alignment: .leading){
-            Text(section.name)
+            Text(section.wrappedValue.name)
             ScrollView(.horizontal){
                 HStack {
                     ForEach(0..<10) { _ in
-                        NavigationLinkWrapperView(SectionImageView(section: $section))
+                        NavigationLinkWrapperView(SectionImageView(section: section))
                     }
                 }
             }
