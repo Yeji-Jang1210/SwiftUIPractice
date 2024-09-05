@@ -36,7 +36,6 @@ struct MyRandomImageView: View {
         NavigationView {
             ScrollView {
                 ForEach($list, id: \.id){ section in
-                    //SectionHorizontalView(section: section)
                     sectionHorizontalView(section)
                 }
             }
@@ -78,24 +77,15 @@ struct SectionImageView: View {
     }
 }
 
-struct NavigationLinkWrapperView<Content: View>: View {
-    
-    let content: () -> Content
-    
-    init(_ content: @autoclosure @escaping () -> Content ){
-        self.content = content
-        print("NavigationLinkWrapperView init")
-    }
-    
-    var body: some View {
-        content()
-    }
-}
-
 struct MyRandomDetailImageView: View {
     
     @State var image: Image
     @Binding var sectionName: String
+    
+    init(image: Image, sectionName: Binding<String>) {
+        self.image = image
+        self._sectionName = sectionName
+    }
     
     var body: some View {
         image

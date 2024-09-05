@@ -10,6 +10,7 @@
 		B801F3252C875A610082E7AC /* UpbitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B801F3242C875A610082E7AC /* UpbitDetailView.swift */; };
 		B87651952C889190001FEB94 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87651942C889190001FEB94 /* CategoryView.swift */; };
 		B87CF8DD2C889BED001D903D /* MyRandomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CF8DC2C889BED001D903D /* MyRandomImageView.swift */; };
+		B87CF8E22C89305F001D903D /* NavigationLinkWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CF8E12C89305F001D903D /* NavigationLinkWrapperView.swift */; };
 		B88BFF1A2C8580E8000FEE94 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88BFF192C8580E8000FEE94 /* Character.swift */; };
 		B88BFF1C2C858655000FEE94 /* SignUpCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88BFF1B2C858655000FEE94 /* SignUpCompleteView.swift */; };
 		B88BFF1E2C8589FA000FEE94 /* MBTI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88BFF1D2C8589FA000FEE94 /* MBTI.swift */; };
@@ -28,6 +29,7 @@
 		B801F3242C875A610082E7AC /* UpbitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpbitDetailView.swift; sourceTree = "<group>"; };
 		B87651942C889190001FEB94 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		B87CF8DC2C889BED001D903D /* MyRandomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRandomImageView.swift; sourceTree = "<group>"; };
+		B87CF8E12C89305F001D903D /* NavigationLinkWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkWrapperView.swift; sourceTree = "<group>"; };
 		B88BFF192C8580E8000FEE94 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		B88BFF1B2C858655000FEE94 /* SignUpCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCompleteView.swift; sourceTree = "<group>"; };
 		B88BFF1D2C8589FA000FEE94 /* MBTI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTI.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			children = (
 				B88BFF192C8580E8000FEE94 /* Character.swift */,
 				B88BFF1D2C8589FA000FEE94 /* MBTI.swift */,
+				B87CF8E12C89305F001D903D /* NavigationLinkWrapperView.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				B8FE8B172C85741300D7218F /* SwiftUIPracticeApp.swift in Sources */,
 				B88BFF1E2C8589FA000FEE94 /* MBTI.swift in Sources */,
 				B87CF8DD2C889BED001D903D /* MyRandomImageView.swift in Sources */,
+				B87CF8E22C89305F001D903D /* NavigationLinkWrapperView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
