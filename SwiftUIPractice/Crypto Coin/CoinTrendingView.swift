@@ -42,10 +42,10 @@ struct CoinTrendingView: View {
     func top15SectionView() -> some View {
         SectionView(title: "Top 15 Coin") {
             ScrollView(.horizontal){
-                LazyHGrid(rows: rows){
-                    ForEach(1..<16){ index in
+                LazyHGrid(rows: rows, spacing: 20){
+                    ForEach(0..<15){ index in
                         VStack {
-                            Top15CoinView(rank: index)
+                            Top15CoinView(rank: index+1)
 
                             if index % 3 != 2 {
                                 Divider()
@@ -60,10 +60,10 @@ struct CoinTrendingView: View {
     func top7NFTView() -> some View {
         SectionView(title: "Top 7 NFT") {
             ScrollView(.horizontal){
-                LazyHGrid(rows: rows){
-                    ForEach(1..<7){ index in
+                LazyHGrid(rows: rows, spacing: 20){
+                    ForEach(0..<7){ index in
                         VStack {
-                            Top15CoinView(rank: index)
+                            Top15CoinView(rank: index+1)
 
                             if index % 3 != 2 {
                                 Divider()
@@ -108,7 +108,8 @@ struct Top15CoinView: View {
                     .foregroundStyle(.red)
             }
         }
-        .padding()
+        .padding(8)
+        .frame(width: UIScreen.main.bounds.width * 0.8)
     }
 }
 
