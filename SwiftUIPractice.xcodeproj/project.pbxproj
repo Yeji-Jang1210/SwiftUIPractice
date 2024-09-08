@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B801F3252C875A610082E7AC /* UpbitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B801F3242C875A610082E7AC /* UpbitDetailView.swift */; };
+		B84B347A2C8DD5AB00B2D7C8 /* CoinTrendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84B34752C8DD5AB00B2D7C8 /* CoinTrendingView.swift */; };
+		B84B347B2C8DD5AB00B2D7C8 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84B34762C8DD5AB00B2D7C8 /* ChartView.swift */; };
+		B84B347C2C8DD5AB00B2D7C8 /* SearchCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84B34772C8DD5AB00B2D7C8 /* SearchCoinView.swift */; };
+		B84B347D2C8DD5AB00B2D7C8 /* FavoriteCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84B34782C8DD5AB00B2D7C8 /* FavoriteCoinView.swift */; };
+		B84B347E2C8DD5AB00B2D7C8 /* MainTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84B34792C8DD5AB00B2D7C8 /* MainTBC.swift */; };
 		B87651952C889190001FEB94 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87651942C889190001FEB94 /* CategoryView.swift */; };
 		B87CF8DD2C889BED001D903D /* MyRandomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CF8DC2C889BED001D903D /* MyRandomImageView.swift */; };
 		B87CF8E22C89305F001D903D /* NavigationLinkWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CF8E12C89305F001D903D /* NavigationLinkWrapperView.swift */; };
@@ -27,6 +32,11 @@
 
 /* Begin PBXFileReference section */
 		B801F3242C875A610082E7AC /* UpbitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpbitDetailView.swift; sourceTree = "<group>"; };
+		B84B34752C8DD5AB00B2D7C8 /* CoinTrendingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinTrendingView.swift; sourceTree = "<group>"; };
+		B84B34762C8DD5AB00B2D7C8 /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		B84B34772C8DD5AB00B2D7C8 /* SearchCoinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCoinView.swift; sourceTree = "<group>"; };
+		B84B34782C8DD5AB00B2D7C8 /* FavoriteCoinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCoinView.swift; sourceTree = "<group>"; };
+		B84B34792C8DD5AB00B2D7C8 /* MainTBC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTBC.swift; sourceTree = "<group>"; };
 		B87651942C889190001FEB94 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		B87CF8DC2C889BED001D903D /* MyRandomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRandomImageView.swift; sourceTree = "<group>"; };
 		B87CF8E12C89305F001D903D /* NavigationLinkWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkWrapperView.swift; sourceTree = "<group>"; };
@@ -56,6 +66,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B84B34742C8DD58900B2D7C8 /* Crypto Coin */ = {
+			isa = PBXGroup;
+			children = (
+				B84B34792C8DD5AB00B2D7C8 /* MainTBC.swift */,
+				B84B34752C8DD5AB00B2D7C8 /* CoinTrendingView.swift */,
+				B84B34762C8DD5AB00B2D7C8 /* ChartView.swift */,
+				B84B34782C8DD5AB00B2D7C8 /* FavoriteCoinView.swift */,
+				B84B34772C8DD5AB00B2D7C8 /* SearchCoinView.swift */,
+			);
+			path = "Crypto Coin";
+			sourceTree = "<group>";
+		};
 		B87CF8DE2C889C8F001D903D /* MyRandomImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +126,7 @@
 		B8FE8B152C85741300D7218F /* SwiftUIPractice */ = {
 			isa = PBXGroup;
 			children = (
+				B84B34742C8DD58900B2D7C8 /* Crypto Coin */,
 				B8E443062C8750E4008C2EF4 /* Upbit */,
 				B88BFF182C8580E0000FEE94 /* Util */,
 				B8FE8B272C857C8500D7218F /* UI */,
@@ -214,13 +237,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84B347A2C8DD5AB00B2D7C8 /* CoinTrendingView.swift in Sources */,
 				B8FE8B192C85741300D7218F /* OnboardingView.swift in Sources */,
 				B8E443082C87515D008C2EF4 /* UpbitView.swift in Sources */,
 				B801F3252C875A610082E7AC /* UpbitDetailView.swift in Sources */,
 				B8E4430A2C875461008C2EF4 /* UpbitAPI.swift in Sources */,
 				B88BFF1C2C858655000FEE94 /* SignUpCompleteView.swift in Sources */,
+				B84B347D2C8DD5AB00B2D7C8 /* FavoriteCoinView.swift in Sources */,
 				B87651952C889190001FEB94 /* CategoryView.swift in Sources */,
+				B84B347E2C8DD5AB00B2D7C8 /* MainTBC.swift in Sources */,
 				B8FE8B292C857CD100D7218F /* ProfileSettingView.swift in Sources */,
+				B84B347B2C8DD5AB00B2D7C8 /* ChartView.swift in Sources */,
+				B84B347C2C8DD5AB00B2D7C8 /* SearchCoinView.swift in Sources */,
 				B88BFF1A2C8580E8000FEE94 /* Character.swift in Sources */,
 				B8FE8B262C85761200D7218F /* BasicButtonView.swift in Sources */,
 				B8FE8B172C85741300D7218F /* SwiftUIPracticeApp.swift in Sources */,

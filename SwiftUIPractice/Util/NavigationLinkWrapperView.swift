@@ -11,7 +11,7 @@ struct NavigationLinkWrapperView<Content: View>: View {
     
     let content: () -> Content
     
-    init(_ content: @autoclosure @escaping () -> Content ){
+    init(_ content: @autoclosure @escaping () -> Content){
         self.content = content
         print("NavigationLinkWrapperView init")
     }
