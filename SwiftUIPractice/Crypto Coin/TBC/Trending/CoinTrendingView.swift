@@ -13,19 +13,17 @@ struct CoinTrendingView: View {
     @StateObject private var viewModel = CoinTrendingViewModel()
     
     var body: some View {
-        NavigationView {
-            ScrollView {
-                VStack(spacing: 24){
-                    favoriteSectionView()
-                    top15SectionView($viewModel.coinList)
-                    top7NFTView($viewModel.nftList)
-                }
+        ScrollView {
+            VStack(spacing: 24){
+                favoriteSectionView()
+                top15SectionView($viewModel.coinList)
+                top7NFTView($viewModel.nftList)
             }
-            .scrollTargetBehavior(.viewAligned)
-            .scrollIndicators(.hidden)
-            .padding()
-            .navigationTitle("Crypto Coin")
         }
+        .scrollTargetBehavior(.viewAligned)
+        .scrollIndicators(.hidden)
+        .padding()
+        .navigationTitle("Crypto Coin")
     }
     
     func favoriteSectionView() -> some View {
@@ -44,12 +42,13 @@ struct CoinTrendingView: View {
                 ForEach(Array(zip(viewModel.coinList.indices, viewModel.coinList)), id: \.1.id){ index, item in
                     VStack {
                         NavigationLink {
-                            ChartView()
+                            ChartView(viewModel: ChartViewModel(id: item.id))
+                                .navigationBarTitleDisplayMode(.inline)
                         } label: {
                             TrendingGridView(viewModel.convertCoinItemToCoinViewItem(index, item))
                         }
                         .buttonStyle(PlainButtonStyle())
-
+                        
                         if index % 3 != 2 {
                             Divider()
                         }
@@ -64,13 +63,8 @@ struct CoinTrendingView: View {
             LazyHGrid(rows: rows, spacing: 20){
                 ForEach(Array(zip(viewModel.nftList.indices, viewModel.nftList)), id: \.1.id){ index, item in
                     VStack {
-                        NavigationLink {
-                            ChartView()
-                        } label: {
-                            TrendingGridView(viewModel.convertNFTToCoinViewItem(index, item))
-                        }
-                        .buttonStyle(PlainButtonStyle())
-
+                        TrendingGridView(viewModel.convertNFTToCoinViewItem(index, item))
+                        
                         if index % 3 != 2 {
                             Divider()
                         }

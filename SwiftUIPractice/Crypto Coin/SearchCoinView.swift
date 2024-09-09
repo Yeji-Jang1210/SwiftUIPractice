@@ -16,15 +16,13 @@ struct SearchCoinView: View {
     @State var markets: Markets = []
     
     var body: some View {
-        NavigationView {
-            ScrollView{
-                listView()
-            }
-            .navigationTitle("Search")
-            .searchable(text: $searchText, placement: .navigationBarDrawer, prompt: "Search")
-            .onSubmit(of: .search) {
-                print("검색완료: \(searchText)")
-            }
+        ScrollView{
+            listView()
+        }
+        .navigationTitle("Search")
+        .searchable(text: $searchText, placement: .navigationBarDrawer, prompt: "Search")
+        .onSubmit(of: .search) {
+            print("검색완료: \(searchText)")
         }
         .task {
             UpbitAPI.fetchAllMarket { markets in

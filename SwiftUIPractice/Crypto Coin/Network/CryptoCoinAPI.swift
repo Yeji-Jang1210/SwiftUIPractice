@@ -26,4 +26,9 @@ struct CryptoCoinAPI {
             }
         }.resume()
     }
+    
+    static func fetchChartCoin(_ id: String){
+        
+        let url = "https://api.coingecko.com/api/v3/coins/markets? vs_currency=krw&ids=\(id)"
+    }
 }

@@ -11,7 +11,6 @@ enum Tab: Int, CaseIterable {
     case trending
     case search
     case favorite
-    case chart
     
     var view: AnyView {
         switch self {
@@ -21,8 +20,6 @@ enum Tab: Int, CaseIterable {
             return AnyView(SearchCoinView())
         case .favorite:
             return AnyView(FavoriteCoinView())
-        case .chart:
-            return AnyView(ChartView())
         }
     }
     
@@ -34,8 +31,6 @@ enum Tab: Int, CaseIterable {
             return Image(systemName: "magnifyingglass")
         case .favorite:
             return Image(systemName: "case")
-        case .chart:
-            return Image(systemName: "person")
         }
     }
 }
@@ -47,11 +42,13 @@ struct MainTBC: View {
     var body: some View {
         TabView(selection: $index) {
             ForEach(Tab.allCases, id: \.rawValue){ tab in
-                tab.view
-                    .tabItem {
-                        tab.icon
-                    }
-                    .tag(tab.rawValue)
+                NavigationView {
+                    tab.view
+                }
+                .tabItem {
+                    tab.icon
+                }
+                .tag(tab.rawValue)
             }
         }
         .tint(.purple)
