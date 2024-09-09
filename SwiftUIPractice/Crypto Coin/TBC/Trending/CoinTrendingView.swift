@@ -10,14 +10,15 @@ import SwiftUI
 struct CoinTrendingView: View {
     
     var rows = Array(repeating: GridItem(.flexible()), count: 3)
+    @StateObject private var viewModel = CoinTrendingViewModel()
     
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(spacing: 24){
                     favoriteSectionView()
-                    top15SectionView()
-                    top7NFTView()
+                    top15SectionView($viewModel.coinList)
+                    top7NFTView($viewModel.nftList)
                 }
             }
             .scrollTargetBehavior(.viewAligned)
@@ -29,27 +30,28 @@ struct CoinTrendingView: View {
     
     func favoriteSectionView() -> some View {
         SectionView(title: "My Favorite"){
-            ScrollView(.horizontal){
-                LazyHStack(spacing: 20){
-                    ForEach(0..<10){ index in
-                        FavoriteView()
-                    }
+            LazyHStack(spacing: 20){
+                ForEach(0..<10){ index in
+                    FavoriteView()
                 }
             }
         }
     }
     
-    func top15SectionView() -> some View {
+    func top15SectionView(_ coins: Binding<[CoinItem]>) -> some View {
         SectionView(title: "Top 15 Coin") {
-            ScrollView(.horizontal){
-                LazyHGrid(rows: rows, spacing: 20){
-                    ForEach(0..<15){ index in
-                        VStack {
-                            Top15CoinView(rank: index+1)
+            LazyHGrid(rows: rows, spacing: 20){
+                ForEach(Array(zip(viewModel.coinList.indices, viewModel.coinList)), id: \.1.id){ index, item in
+                    VStack {
+                        NavigationLink {
+                            ChartView()
+                        } label: {
+                            TrendingGridView(viewModel.convertCoinItemToCoinViewItem(index, item))
+                        }
+                        .buttonStyle(PlainButtonStyle())
 
-                            if index % 3 != 2 {
-                                Divider()
-                            }
+                        if index % 3 != 2 {
+                            Divider()
                         }
                     }
                 }
@@ -57,59 +59,25 @@ struct CoinTrendingView: View {
         }
     }
     
-    func top7NFTView() -> some View {
+    func top7NFTView(_ nfts: Binding<[NFT]>) -> some View {
         SectionView(title: "Top 7 NFT") {
-            ScrollView(.horizontal){
-                LazyHGrid(rows: rows, spacing: 20){
-                    ForEach(0..<7){ index in
-                        VStack {
-                            Top15CoinView(rank: index+1)
+            LazyHGrid(rows: rows, spacing: 20){
+                ForEach(Array(zip(viewModel.nftList.indices, viewModel.nftList)), id: \.1.id){ index, item in
+                    VStack {
+                        NavigationLink {
+                            ChartView()
+                        } label: {
+                            TrendingGridView(viewModel.convertNFTToCoinViewItem(index, item))
+                        }
+                        .buttonStyle(PlainButtonStyle())
 
-                            if index % 3 != 2 {
-                                Divider()
-                            }
+                        if index % 3 != 2 {
+                            Divider()
                         }
                     }
                 }
             }
         }
-    }
-}
-
-struct Top15CoinView: View {
-    var rank: Int
-    
-    init(rank: Int) {
-        self.rank = rank
-    }
-    
-    var body: some View {
-        HStack(spacing: 12){
-            Text("\(rank)")
-                .font(.title)
-            
-            Image(systemName: "star.fill")
-                .frame(width: 44, height: 44)
-                
-            VStack(alignment: .leading){
-                Text("Solana")
-                    .font(.system(size: 20, weight: .bold))
-                
-                Text("LTC")
-                    .foregroundStyle(.gray)
-            }
-        
-            Spacer()
-            
-            VStack(alignment: .trailing){
-                Text("$0.4175")
-                    .font(.title3)
-                Text("+1.38%")
-                    .foregroundStyle(.red)
-            }
-        }
-        .padding(8)
-        .frame(width: UIScreen.main.bounds.width * 0.8)
     }
 }
 
@@ -166,11 +134,13 @@ struct SectionView<Content: View>: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
             
-            content()
+            ScrollView(.horizontal){
+                content()
+            }
         }
     }
 }
 
-#Preview {
-    CoinTrendingView()
-}
+//#Preview {
+//    CoinTrendingView()
+//}

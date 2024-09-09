@@ -58,6 +58,6 @@ struct MainTBC: View {
     }
 }
 
-#Preview {
-    MainTBC()
-}
+//#Preview {
+//    MainTBC()
+//}
