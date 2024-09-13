@@ -9,7 +9,12 @@ import Foundation
 
 final class ChartViewModel: ObservableObject {
     
+    typealias Chart = Coinparams.ChartResponse
+    
     init(id: String){
-        
+        print(id)
+        CryptoCoinAPI.callAPI(type: Chart.self, api: .chart(id: id)) { response in
+            dump(response)
+        }
     }
 }

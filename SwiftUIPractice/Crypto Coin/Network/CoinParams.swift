@@ -13,6 +13,27 @@ final class Coinparams {
         let coins: [Coin]
         let nfts: [NFT]
     }
+    
+    struct ChartResponse: Decodable, Hashable {
+        let id: String
+        let name: String
+        let symbol: String
+        let image: String
+        let current_price: Double
+        let price_change_percentage_24h: Double
+        let low_24h: Double
+        let high_24h: Double
+        let ath: Double
+        let ath_date: String
+        let atl: Double
+        let atl_date: String
+        let last_updated: String
+        let sparkline_in_7d: SparkLine
+    }
+}
+
+struct SparkLine: Decodable, Hashable {
+    let price: [Double]
 }
 
 struct Coin: Decodable, Hashable {

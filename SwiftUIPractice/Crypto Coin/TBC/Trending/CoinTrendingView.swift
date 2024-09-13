@@ -42,8 +42,9 @@ struct CoinTrendingView: View {
                 ForEach(Array(zip(viewModel.coinList.indices, viewModel.coinList)), id: \.1.id){ index, item in
                     VStack {
                         NavigationLink {
-                            ChartView(viewModel: ChartViewModel(id: item.id))
-                                .navigationBarTitleDisplayMode(.inline)
+                            NavigationLinkWrapperView(ChartView(viewModel: ChartViewModel(id: item.id))
+                                )
+                            .navigationBarTitleDisplayMode(.inline)
                         } label: {
                             TrendingGridView(viewModel.convertCoinItemToCoinViewItem(index, item))
                         }

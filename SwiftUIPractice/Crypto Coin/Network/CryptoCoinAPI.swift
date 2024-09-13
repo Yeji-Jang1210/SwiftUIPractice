@@ -10,14 +10,12 @@ import Foundation
 struct CryptoCoinAPI {
     
     private init() { }
-
-    static func fetchTrendingCoin(completion: @escaping (Coinparams.TrendingResponse) -> Void) {
-        
-        let url = URL(string: "https://api.coingecko.com/api/v3/search/trending")!
-        URLSession.shared.dataTask(with: url) { data, response, error in
+    
+    static func callAPI<T: Decodable>(type: T.Type, api: NetworkType, completion: @escaping (T) -> Void) {
+        URLSession.shared.dataTask(with: api.url) { data, response, error in
             guard let data = data else { return }
             do {
-                let decodedData = try JSONDecoder().decode(Coinparams.TrendingResponse.self, from: data)
+                let decodedData = try JSONDecoder().decode(T.self, from: data)
                 DispatchQueue.main.async {
                     completion(decodedData)
                 }
@@ -26,9 +24,18 @@ struct CryptoCoinAPI {
             }
         }.resume()
     }
+}
+
+enum NetworkType {
+    case trending
+    case chart(id: String)
     
-    static func fetchChartCoin(_ id: String){
-        
-        let url = "https://api.coingecko.com/api/v3/coins/markets? vs_currency=krw&ids=\(id)"
+    var url: URL {
+        switch self {
+        case .trending:
+            return URL(string: "https://api.coingecko.com/api/v3/search/trending")!
+        case .chart(let id):
+            return URL(string:  "https://api.coingecko.com/api/v3/coins/markets?vs_currency=krw&ids=\(id)")!
+        }
     }
 }

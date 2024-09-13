@@ -8,6 +8,8 @@
 import Foundation
 
 final class CoinTrendingViewModel: ObservableObject {
+    typealias Trending = Coinparams.TrendingResponse
+    
     @Published var coinList: [CoinItem] = []
     @Published var nftList: [NFT] = []
     
@@ -16,7 +18,7 @@ final class CoinTrendingViewModel: ObservableObject {
     }
     
     func fetchData(){
-        CryptoCoinAPI.fetchTrendingCoin { response in
+        CryptoCoinAPI.callAPI(type: Trending.self, api: .trending) { response in
             self.coinList = response.coins.map { $0.item }
             self.nftList = response.nfts
         }
